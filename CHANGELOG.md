@@ -1,6 +1,15 @@
 Changelog
 =========
 
+## 0.9.5 (2026-05-25)
+
+### Parameter/Field Changes & Updates
+
+* New/Changed parameters: totalAssets, fundTicker, fundIsin, marketPrice, marketValue  [[@qumundo](https://github.com/qumundo)].
+* Added range filtering for numbers.  [[@qumundo](https://github.com/qumundo)].
+* Updated example.json [[@qumundo](https://github.com/qumundo)].
+* Updated README.md [[@qumundo](https://github.com/qumundo)].
+
 ## 0.9.4 (2026-05-12)
 
 ### Bug Fixes

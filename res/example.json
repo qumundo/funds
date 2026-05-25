@@ -10,7 +10,7 @@
 			{ "key": "type", "field": "type", "type": "string" },
 			{ "key": "currency", "field": "currency", "type": "string" },
 			{ "key": "shares", "field": "shares", "type": "number" },
-			{ "key": "total_assets", "field": "total_assets", "type": "number" },
+			{ "key": "totalAssets", "field": "total_assets", "type": "number" },
 			{ "key": "nav", "field": "nav", "type": "number" },
 			{ "key": "sfdr", "field": "sfdr", "type": "number" },
 			{ "key": "ter", "field": "ter", "type": "number" },
@@ -70,8 +70,8 @@
 	"funds/holdings/search?": {
 		"items": [
 			{ "key": "date", "field": "date", "type": "date" },
-			{ "key": "index_ticker", "field": "index_ticker", "type": "string" },
-			{ "key": "index_isin", "field": "index_isin", "type": "string" },
+			{ "key": "fundTicker", "field": "fund_ticker", "type": "string" },
+			{ "key": "fundIsin", "field": "fund_isin", "type": "string" },
 			{ "key": "weighting", "field": "weighting", "type": "number" },
 			{ "key": "name", "field": "name", "type": "string" },
 			{ "key": "ticker", "field": "ticker", "type": "string" },
@@ -80,9 +80,9 @@
 			{ "key": "sedol", "field": "sedol", "type": "string" },
 			{ "key": "country", "field": "country", "type": "string" },
 			{ "key": "currency", "field": "currency", "type": "string" },
-			{ "key": "market_price", "field": "market_price", "type": "number" },
+			{ "key": "marketPrice", "field": "market_price", "type": "number" },
 			{ "key": "shares", "field": "shares", "type": "number" },
-			{ "key": "market_value", "field": "market_value", "type": "number" },
+			{ "key": "marketValue", "field": "market_value", "type": "number" },
 			{ "key": "dated", "field": "dated", "type": "date" }
 		],
 		"200": {
@@ -98,8 +98,8 @@
 				{
           "id": 4365,
           "date": "20260509",
-          "index_ticker": "",
-          "index_isin": "LU0908500753",
+          "fund_ticker": "",
+          "fund_isin": "LU0908500753",
           "weighting": "0.0389674",
           "name": "ASML HOLDING NV",
           "ticker": "ASML NA",
@@ -116,8 +116,8 @@
         {
           "id": 4366,
           "date": "20260509",
-          "index_ticker": "",
-          "index_isin": "LU0908500753",
+          "fund_ticker": "",
+          "fund_isin": "LU0908500753",
           "weighting": "0.02054824",
           "name": "HSBC HOLDINGS PLC",
           "ticker": "HSBA LN",
@@ -134,8 +134,8 @@
         {
           "id": 4367,
           "date": "20260509",
-          "index_ticker": "",
-          "index_isin": "LU0908500753",
+          "fund_ticker": "",
+          "fund_isin": "LU0908500753",
           "weighting": "0.01900984",
           "name": "ROCHE HOLDING AG - GENUSSS CHF",
           "ticker": "ROP SE",

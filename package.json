@@ -1,7 +1,7 @@
 {
   "name": "@qumundo/funds",
-  "version": "0.9.4",
-  "description": "Access daily fund and etf information, analytics and insights including reference data, holdings data and primary market data.",
+  "version": "0.9.5",
+  "description": "Access and use fund and etf information, analytics and insights including reference data, holdings data and primary market data.",
   "homepage": "https://github.com/qumundo/funds",
   "author": {
     "name": "Qumundo e.K.",

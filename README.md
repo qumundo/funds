@@ -1,5 +1,5 @@
-# Funds
-Fund and ETF data service for identifying, accessing and using daily fund and ETF information, analytics and insights including reference, holdings and primary market data. An ETF, or Exchange-Traded Fund, is a type of investment fund that bundles together and holds a basket various assets - like stocks, bonds, or commodities - and trades on stock exchanges like an individual stock. When you buy a share of an ETF, you are buying a portion of a larger pool of assets and most ETFs are designed to track a specific index. The released services and APIs include a comprehensive set of tools and information like reference data, holdings data, pricing and primary market data, ranging from identifiers, classifications and meta data, constituent- and security-level weightings, asset class categorization and pricing information, as well net asset value (NAV), asset under management (AUM) and fund flow information.
+# Funds & ETFs Data
+Fund and ETF data service for identifying, accessing and using fund and ETF information, analytics and insights including reference data, holdings data and primary market data. An ETF, or Exchange-Traded Fund, is a type of investment fund that bundles together and holds a basket of assets - like stocks, bonds, or commodities - and trades on a stock exchange. When you buy a share of an ETF, you are buying a portion of a larger pool of assets. The released services and APIs include a comprehensive set of tools and information like reference data, holdings data, pricing and primary market data, ranging from identifiers, classifications and meta data, constituent- and security-level weightings, asset class categorization and pricing information, as well net asset value (NAV), asset under management (AUM) and fund flow information.
 
 Documentation, Examples, FAQ, Terms & Conditions and License: [https://www.qumundo.com/docs/funds-and-etfs-data](https://www.qumundo.com/docs/funds-and-etfs-data).
 
@@ -30,7 +30,7 @@ npm install --save @qumundo/funds
 
 ## How to use?
 
-This module may be used to identify, access and use daily fund and ETF information, analytics and insights including reference, holdings and primary market data. You may use multi-tag filter parameters (keys) to build customized queries to your needs.
+This module may be used to identify, access and use fund and ETF information, analytics and insights including reference, holdings and primary market data. You may use multi-tag filter parameters (keys) to build customized queries to your needs.
 
 ### :link: Import the module
 
@@ -78,8 +78,8 @@ data.data[0] ===
 {
   "id": 4365,
   "date": "20260509",
-  "index_ticker": "",
-  "index_isin": "LU0908500753",
+  "fund_ticker": "",
+  "fund_isin": "LU0908500753",
   "weighting": "0.0389674",
   "name": "ASML HOLDING NV",
   "ticker": "ASML NA",
@@ -177,6 +177,14 @@ let items = [
 let data = await Funds.getData({ path: "funds/search?", items, operator: 'or' });
 ```
 
+If the search result should be in between a range of values, use double dots '..' between two values:
+
+```javascript
+let items = [
+  { key: 'nav', value: '100..200' }
+];
+```
+
 Documentation and examples of available filter options can be found here: [https://www.qumundo.com/docs/introduction#filtering](https://www.qumundo.com/docs/introduction#filtering).
 
 ## Pagination
@@ -211,7 +219,7 @@ let example = await Funds.getExample({ path: "funds/search?" });
   { "key": "type", "field": "type", "type": "string" },
   { "key": "currency", "field": "currency", "type": "string" },
   { "key": "shares", "field": "shares", "type": "number" },
-  { "key": "total_assets", "field": "total_assets", "type": "number" },
+  { "key": "totalAssets", "field": "total_assets", "type": "number" },
   { "key": "nav", "field": "nav", "type": "number" },
   { "key": "sfdr", "field": "sfdr", "type": "number" },
   { "key": "ter", "field": "ter", "type": "number" },
@@ -230,8 +238,8 @@ let example = await Funds.getExample({ path: "funds/holdings/search?" });
 /*
 [
   { "key": "date", "field": "date", "type": "date" },
-  { "key": "index_ticker", "field": "index_ticker", "type": "string" },
-  { "key": "index_isin", "field": "index_isin", "type": "string" },
+  { "key": "fundTicker", "field": "fund_ticker", "type": "string" },
+  { "key": "fundIsin", "field": "fund_isin", "type": "string" },
   { "key": "weighting", "field": "weighting", "type": "number" },
   { "key": "name", "field": "name", "type": "string" },
   { "key": "ticker", "field": "ticker", "type": "string" },
@@ -240,7 +248,7 @@ let example = await Funds.getExample({ path: "funds/holdings/search?" });
   { "key": "sedol", "field": "sedol", "type": "string" },
   { "key": "country", "field": "country", "type": "string" },
   { "key": "currency", "field": "currency", "type": "string" },
-  { "key": "market_price", "field": "market_price", "type": "number" },
+  { "key": "marketPrice", "field": "market_price", "type": "number" },
   { "key": "shares", "field": "shares", "type": "number" },
   { "key": "market_value", "field": "market_value", "type": "number" },
   { "key": "dated", "field": "dated", "type": "date" }
@@ -268,8 +276,8 @@ let example = await Funds.getExample(false, { path: "funds/holdings/search?" });
     {
       "id": 4365,
       "date": "20260509",
-      "index_ticker": "",
-      "index_isin": "LU0908500753",
+      "fund_ticker": "",
+      "fund_isin": "LU0908500753",
       "weighting": "0.0389674",
       "name": "ASML HOLDING NV",
       "ticker": "ASML NA",
@@ -286,8 +294,8 @@ let example = await Funds.getExample(false, { path: "funds/holdings/search?" });
     {
       "id": 4366,
       "date": "20260509",
-      "index_ticker": "",
-      "index_isin": "LU0908500753",
+      "fund_ticker": "",
+      "fund_isin": "LU0908500753",
       "weighting": "0.02054824",
       "name": "HSBC HOLDINGS PLC",
       "ticker": "HSBA LN",
@@ -304,8 +312,8 @@ let example = await Funds.getExample(false, { path: "funds/holdings/search?" });
     {
       "id": 4367,
       "date": "20260509",
-      "index_ticker": "",
-      "index_isin": "LU0908500753",
+      "fund_ticker": "",
+      "fund_isin": "LU0908500753",
       "weighting": "0.01900984",
       "name": "ROCHE HOLDING AG - GENUSSS CHF",
       "ticker": "ROP SE",
