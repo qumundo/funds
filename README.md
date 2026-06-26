@@ -38,7 +38,7 @@ Import the module in your code:
 
 `const Funds = require("@qumundo/funds")`
 
-### :arrow_right: Get index level fund and etf data
+### :arrow_right: Get fund level fund and etf data
 
 ```javascript
 
@@ -47,22 +47,22 @@ let data = await Funds.getData({ path: "funds/search?" });
 /*
 data.data[0] ===
 {
-  "id": 106571,
-  "date": "20260509",
-  "name": "Xtrackers World Equity Enhanced Active UCITS ETF 1C",
-  "ticker": "XEEW GY",
-  "isin": "IE00094GSCQ4",
-  "wkn": "DBX0WP",
+  "id": 367920,
+  "date": "20260624",
+  "name": "Amundi Smart Overnight Return UCITS ETF Acc",
+  "ticker": "",
+  "isin": "LU1190417599",
+  "wkn": "LYX0WM",
   "sedol": "",
   "type": "ETF",
-  "currency": "USD",
-  "shares": "12236619",
-  "total_assets": "394630963",
-  "nav": "32.25",
-  "sfdr": "8",
-  "ter": "0.0025",
-  "inception": "20250514",
-  "dated": "20260507"
+  "currency": "EUR",
+  "shares": "58099332",
+  "total_assets": "19032253517.08",
+  "nav": "109.31",
+  "sfdr": "6",
+  "ter": "0.1000",
+  "inception": "20250307",
+  "dated": "20260622"
 }
 */
 ```
@@ -76,23 +76,23 @@ let data = await Funds.getData({ path: "funds/holdings/search?" });
 /*
 data.data[0] ===
 {
-  "id": 4365,
-  "date": "20260509",
+  "id": 4632,
+  "date": "20260624",
   "fund_ticker": "",
-  "fund_isin": "LU0908500753",
-  "weighting": "0.0389674",
-  "name": "ASML HOLDING NV",
-  "ticker": "ASML NA",
-  "isin": "NL0010273215",
+  "fund_isin": "LU1190417599",
+  "weighting": "0.05678901",
+  "name": "APPLE INC",
+  "ticker": "AAPL UW",
+  "isin": "US0378331005",
   "wkn": "",
   "sedol": "",
-  "country": "Netherlands",
-  "currency": "EUR",
+  "country": "United States",
+  "currency": "USD",
   "market_price": "",
-  "shares": "559490",
+  "shares": "4159759",
   "market_value": "",
-  "dated": "20260506"
-},
+  "dated": "20260622"
+}
 */
 ```
 
@@ -202,7 +202,7 @@ let data = await Funds.getData({ path: "funds/search?", items });
 
 ## Filter Keys and Example Responses
 
-Get an overview of all filter parameter (key) for the index level data available call the .getExample() instance with the path:
+Get an overview of all filter parameter (key) for the fund level data available call the .getExample() instance with the path:
 
 ```javascript
 
