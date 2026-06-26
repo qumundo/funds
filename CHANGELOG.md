@@ -1,6 +1,13 @@
 Changelog
 =========
 
+## 0.9.7 (2026-06-26)
+
+### Updates
+
+* Updated example.json [[@qumundo](https://github.com/qumundo)].
+* Updated README.md [[@qumundo](https://github.com/qumundo)].
+
 ## 0.9.6 (2026-06-26)
 
 ### Updates

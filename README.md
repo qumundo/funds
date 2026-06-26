@@ -47,22 +47,22 @@ let data = await Funds.getData({ path: "funds/search?" });
 /*
 data.data[0] ===
 {
-  "id": 367920,
+  "id": 368155,
   "date": "20260624",
-  "name": "Amundi Smart Overnight Return UCITS ETF Acc",
+  "name": "Amundi Prime Eurozone UCITS ETF DR (C)",
   "ticker": "",
-  "isin": "LU1190417599",
-  "wkn": "LYX0WM",
+  "isin": "LU2089238112",
+  "wkn": "A2PWMJ",
   "sedol": "",
   "type": "ETF",
   "currency": "EUR",
-  "shares": "58099332",
-  "total_assets": "19032253517.08",
-  "nav": "109.31",
+  "shares": "2606485",
+  "total_assets": "846960740.35",
+  "nav": "38.39",
   "sfdr": "6",
-  "ter": "0.1000",
-  "inception": "20250307",
-  "dated": "20260622"
+  "ter": "0.0500",
+  "inception": "20200115",
+  "dated": "20260623"
 }
 */
 ```
@@ -76,20 +76,20 @@ let data = await Funds.getData({ path: "funds/holdings/search?" });
 /*
 data.data[0] ===
 {
-  "id": 4632,
+  "id": 213283,
   "date": "20260624",
   "fund_ticker": "",
-  "fund_isin": "LU1190417599",
-  "weighting": "0.05678901",
-  "name": "APPLE INC",
-  "ticker": "AAPL UW",
-  "isin": "US0378331005",
+  "fund_isin": "LU2089238112",
+  "weighting": "0.0982517",
+  "name": "ASML HOLDING NV",
+  "ticker": "ASML NA",
+  "isin": "NL0010273215",
   "wkn": "",
   "sedol": "",
-  "country": "United States",
-  "currency": "USD",
+  "country": "Netherlands",
+  "currency": "EUR",
   "market_price": "",
-  "shares": "4159759",
+  "shares": "50964",
   "market_value": "",
   "dated": "20260622"
 }
@@ -117,7 +117,7 @@ Filtering and customized requests can be built and accomplished by passing filte
 
 ```javascript
 let items = [
-  { key: 'isin', value: 'IE00094GSCQ4' }
+  { key: 'isin', value: 'LU2089238112' }
 ];
 
 let data = await Funds.getData({ path: "funds/search?", items });
@@ -263,22 +263,22 @@ Get an example response for a specific database (path) available:
 let example = await Funds.getExample(false, { path: "funds/holdings/search?" });
 
 /*
-{
+"200": {
   "status": 200,
   "success": true,
   "record_count": 100,
-  "total_records": 2411770,
+  "total_records": 2770422,
   "page_number": 1,
   "page_size": 100,
-  "total_pages": 24118,
+  "total_pages": 27705,
   "more_pages": true,
   "data": [
     {
-      "id": 4365,
-      "date": "20260509",
+      "id": 213283,
+      "date": "20260624",
       "fund_ticker": "",
-      "fund_isin": "LU0908500753",
-      "weighting": "0.0389674",
+      "fund_isin": "LU2089238112",
+      "weighting": "0.0982517",
       "name": "ASML HOLDING NV",
       "ticker": "ASML NA",
       "isin": "NL0010273215",
@@ -287,45 +287,81 @@ let example = await Funds.getExample(false, { path: "funds/holdings/search?" });
       "country": "Netherlands",
       "currency": "EUR",
       "market_price": "",
-      "shares": "559490",
+      "shares": "50964",
       "market_value": "",
-      "dated": "20260506"
+      "dated": "20260622"
     },
     {
-      "id": 4366,
-      "date": "20260509",
+      "id": 213284,
+      "date": "20260624",
       "fund_ticker": "",
-      "fund_isin": "LU0908500753",
-      "weighting": "0.02054824",
-      "name": "HSBC HOLDINGS PLC",
-      "ticker": "HSBA LN",
-      "isin": "GB0005405286",
+      "fund_isin": "LU2089238112",
+      "weighting": "0.03128721",
+      "name": "SIEMENS AG-REG",
+      "ticker": "SIE GY",
+      "isin": "DE0007236101",
       "wkn": "",
       "sedol": "",
-      "country": "United Kingdom",
-      "currency": "GBP",
+      "country": "Germany",
+      "currency": "EUR",
       "market_price": "",
-      "shares": "24769097",
+      "shares": "96315",
       "market_value": "",
-      "dated": "20260506"
+      "dated": "20260622"
     },
     {
-      "id": 4367,
-      "date": "20260509",
+      "id": 213285,
+      "date": "20260624",
       "fund_ticker": "",
-      "fund_isin": "LU0908500753",
-      "weighting": "0.01900984",
-      "name": "ROCHE HOLDING AG - GENUSSS CHF",
-      "ticker": "ROP SE",
-      "isin": "CH1499059983",
+      "fund_isin": "LU2089238112",
+      "weighting": "0.02712795",
+      "name": "BANCO SANTANDER SA MADRID",
+      "ticker": "SAN SM",
+      "isin": "ES0113900J37",
       "wkn": "",
       "sedol": "",
-      "country": "Switzerland",
-      "currency": "CHF",
+      "country": "Spain",
+      "currency": "EUR",
       "market_price": "",
-      "shares": "1013461",
+      "shares": "1941956",
       "market_value": "",
-      "dated": "20260506"
+      "dated": "20260622"
+    },
+    {
+      "id": 213286,
+      "date": "20260624",
+      "fund_ticker": "",
+      "fund_isin": "LU2089238112",
+      "weighting": "0.02475573",
+      "name": "SCHNEIDER ELECT SE",
+      "ticker": "SU FP",
+      "isin": "FR0000121972",
+      "wkn": "",
+      "sedol": "",
+      "country": "France",
+      "currency": "EUR",
+      "market_price": "",
+      "shares": "72629",
+      "market_value": "",
+      "dated": "20260622"
+    },
+    {
+      "id": 213287,
+      "date": "20260624",
+      "fund_ticker": "",
+      "fund_isin": "LU2089238112",
+      "weighting": "0.02415756",
+      "name": "ALLIANZ SE-REG",
+      "ticker": "ALV GY",
+      "isin": "DE0008404005",
+      "wkn": "",
+      "sedol": "",
+      "country": "Germany",
+      "currency": "EUR",
+      "market_price": "",
+      "shares": "51029",
+      "market_value": "",
+      "dated": "20260622"
     },
     {}
   ]
